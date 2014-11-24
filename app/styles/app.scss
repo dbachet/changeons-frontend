@@ -1,13 +1,19 @@
+@import 'shared_sass.scss';
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
 html, body {
   margin: 20px;
   background: url('/assets/images/transparent-pattern.png'),
-              #34AB00;
+              $green;
 }
 
 h1 {
   font-family: 'Pacifico', cursive;
-  color: #fff;
+  color: $white;
+}
+
+section#description {
+  color: $darken-white-color;
+  p big { color: $white }
 }
 
