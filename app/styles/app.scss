@@ -1,3 +1,4 @@
+@import 'bower_components/font-awesome/scss/font-awesome.scss';
 @import 'shared_sass.scss';
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
@@ -15,5 +16,30 @@ h1 {
 section#description {
   color: $darken-white-color;
   p big { color: $white }
+}
+
+footer {
+  height: 80px;
+  font-weight: 200;
+  vertical-align: bottom;
+  color: $dark-on-bright;
+  a { color: $darken-background-color }
+  a:hover {
+    text-decoration: none;
+    color: $green;
+  }
+  .row-fluid { line-height: 80px }
+  .circle-footer {
+    background-color: $lighten-background-color;
+    @include rounded(50%);
+    display: inline-block;
+    height:35px;
+    width: 35px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
+    margin-right: 10px;
+    font-size: 15px;
+  }
 }
 
