@@ -1,0 +1,41 @@
+<div id="landing-page">
+  <form {{action "create" on="submit"}} {{bind-attr class="hasErrors"}}>
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <div class="notify-me">M'INFORMER DU LANCEMENT DE CHANGEONS</div>
+
+        <div class="alerts">
+          {{#if hasErrors}}
+            <ul class="alert alert-danger" role="alert">
+              {{#each error in formattedErrors}}
+                <li>{{error}}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+
+          {{#if serverError}}
+            <p class="errors alert alert-danger" role="alert">{{serverError}}</p>
+          {{/if}}
+
+          {{#if hasSucceeded}}
+            <p class="success-message alert alert-success" role="alert">Vous allez recevoir un email pour confirmer votre inscription à la liste d'attente.</p>
+          {{/if}}
+        </div>
+
+        <div class="row inputs">
+          <div class="col-xs-12 col-md-9 no-margin-padding sm md lg">
+            {{input value=email id="email" placeholder="Entrez votre email" type="email"}}
+          </div>
+          <div class="col-xs-12 mobile-vertical-separator visible-xs"></div>
+          <div class="col-xs-12 col-md-3 no-margin-padding sm md lg">
+            <button id="btn-save-mailing-list-recipient" class="btn-block" {{action "create"}}>
+              Envoyer
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3 md-only"></div>
+    </div>
+  </form>
+</div>
