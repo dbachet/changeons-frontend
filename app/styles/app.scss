@@ -2,44 +2,181 @@
 @import 'shared_sass.scss';
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
-html, body {
-  margin: 20px;
-  background: url('/assets/images/transparent-pattern.png'),
-              $green;
+html
+
+body {
+  color: #fff;
+  font-weight: 200;
+  margin:0;
+  padding:0;
+  background-image: url("https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/background_mini.jpg");
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
 }
 
-h1 {
-  font-family: 'Pacifico', cursive;
-  color: $white;
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+.row.horizontal-center {
+  width: 100%;
+  margin: 0;
+}
+
+.light-background {
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-top: 20px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.4);
+  }
+}
+
+a.home-link {
+  .logo {
+    width: 90%;
+  }
 }
 
 section#description {
-  color: $darken-white-color;
-  p big { color: $white }
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.9em;
+
+}
+
+div#top-frame {
+  width: 100%;
+  padding: 40px 0 0;
+  .notify-me {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 20px 0 4px;
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      font-weight: 200;
+    }
+    font-weight: 400;
+  }
+
+  input#email,
+  #btn-save-mailing-list-recipient {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-image: none;
+    border: none;
+    border-radius: none;
+    -webkit-border-radius:0px;
+    -webkit-appearance: none;
+    &:focus {
+      outline:none;
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  input#email {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    &::-webkit-input-placeholder {
+      color:    rgba(0, 0, 0, 0.5);
+      font-weight: 400;
+    }
+    &::-moz-placeholder {
+       color:    rgba(0, 0, 0, 0.5);
+       opacity:  1;
+       font-weight: 400;
+    }
+    &::-moz-placeholder {
+       color:    rgba(0, 0, 0, 0.5);
+       opacity:  1;
+       font-weight: 400;
+    }
+    &:-ms-input-placeholder {
+       color:    rgba(0, 0, 0, 0.5);
+       font-weight: 400;
+    }
+  }
+
+  #btn-save-mailing-list-recipient {
+    background-color: #34495f;
+    color: #fff;
+  }
+
+  #landing-page {
+    padding: 20px 0 10px;
+    form.has-errors {
+      ul { list-style: none;}
+      input {
+        border: 1px solid red;
+      }
+    }
+  }
+
+  .mobile-vertical-separator { height: 10px }
+  .no-margin-padding {
+    &.sm {
+      /* Small devices (tablets, 768px and up) */
+      @media (min-width: 768px) {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &.md {
+      /* Medium devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &.lg {
+      /* Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
 }
 
 footer {
-  height: 80px;
-  font-weight: 200;
-  vertical-align: bottom;
-  color: $dark-on-bright;
-  a { color: $darken-background-color }
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.8em;
+  a { color: #fff; }
   a:hover {
     text-decoration: none;
-    color: $green;
+    color: #fff;
   }
-  .row-fluid { line-height: 80px }
-  .circle-footer {
-    background-color: $lighten-background-color;
-    @include rounded(50%);
-    display: inline-block;
-    height:35px;
-    width: 35px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 35px;
-    margin-right: 10px;
-    font-size: 15px;
-  }
+  .copyright { font-size: 0.5em; }
 }
 
+/* This gets Google to fall into place */
+.social-share {
+  font-size: 1px;
+  margin: 40px 0 10px;
+  display: none;
+  .row div { margin-bottom: 10px }
+}
+
+/* This gets Facebook to fall into place */
+.social-share iframe {
+  vertical-align: baseline;
+}
+
+.fb-share-button{
+ margin-right:20px;
+}
+/* Set an optional width for your button wrappers */
+.social-share span {
+  display: inline-block;
+  width: 110px;
+}

@@ -3,17 +3,61 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ChangeonsFrontend</title>
-    <meta name="description" content="">
+    <title>Changeons, ENSEMBLE - Relayez l'information sur l'écologie et l'environnement !</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Relais de l'information sur l'écologie et l'environnement. Participez en partageant les articles qui vous ont intéressés. Militons ensemble pour une prise de conscience générale !">
+    <meta name="keywords" content="ensemble, changeons, changement, relais, information, informations, news, écologie, écologique, bio, organic, environnement, environnemental, durable, nature, naturel, vert, green, communauté, communautaire, solidarité, solidaire, énergie, éolien, éolienne, solaire, agroécologie, agriculture, santé, bien-être, éducation">
+    <meta name="author" content="Damien Bachet">
 
     {{content-for 'head'}}
 
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/changeons-frontend.css">
+
+    {{content-for 'head-footer'}}
   </head>
   <body>
+    <div id="fb-root"></div>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45921610-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- Facebook share button script -->
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Twitter share button script -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <!-- Pinterest share button -->
+    <script type="text/javascript">
+    (function(d){
+        var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+        p.type = 'text/javascript';
+        p.async = true;
+        p.src = '//assets.pinterest.com/js/pinit.js';
+        f.parentNode.insertBefore(p, f);
+    }(document));
+    </script>
+
+    {{content-for 'body'}}
     <script src="assets/vendor.js"></script>
     <script src="assets/changeons-frontend.js"></script>
+    {{content-for 'body-footer'}}
   </body>
 </html>

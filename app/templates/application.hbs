@@ -1,25 +1,68 @@
-<div class="container">
-  <h1>Changeons</h1>
+<div class="container-fluid vertical-center">
+  <div class="row horizontal-center">
+    <div class="col-md-12">
+      <div id="top-frame">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3" style="text-align: center">
+            <a href="http://changeons.org" class="home-link" alt="ENSEMBLE, Changeons">
+              <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons.png" class="logo">
+            </a>
+          </div>
+        </div>
 
-  <section id="description">
-    <p>Relais de l'information sur l'écologie et l'environnement.</p>
-    <p>Puisque l'on est plus fort groupés, <big>contribuons tous ensemble</big> au changement !</p>
-  </section>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-md-offset-3 light-background">
+            <section id="description">
+              <p>
+                Relayons l'information sur l'écologie et&nbsp;l'environnement&nbsp;!
+              </p>
+            </section>
 
-  <footer>
-    <a href='mailto:admin@changeons.org'>
-      <i class="fa fa-envelope circle-footer"></i>
-    </a>
-    <a href="https://twitter.com/ChangeonsOrg">
-      <i class="fa fa-twitter circle-footer"></i>
-    </a>
-    <a href="https://github.com/dbachet/changeons">
-      <i class="fa fa-github-alt circle-footer"></i>
-    </a>
-    <a href="https://huboard.com/dbachet/changeons">
-      <i class="fa fa fa-h-square circle-footer"></i>
-    </a>
-    <p>© 2013 Damien Bachet</p>
-  </footer>
-  {{outlet}}
+            <section class="social-share">
+              <div class="row">
+                <div class="col-xs-4 col-md-2 col-md-offset-3">
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://changeons.org" data-text="Informons-nous les uns, les autres via Changeons.org ! Plus qu'un simple geste, un combat pour la nature">Tweet</a>
+                </div>
+
+                <div class="col-xs-4 col-md-2">
+                  <div class="fb-share-button" data-href="http://changeons.org" data-layout="box_count"></div>
+                </div>
+
+                <div class="col-xs-4 col-md-2 pinit">
+                  <a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+                </div>
+
+                <!-- <div class="col-xs-4 col-xs-offset-2 col-md-2 col-md-offset-0">
+                  <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-href="http://changeons.org"></div>
+                </div> -->
+              </div>
+            </section>
+          </div>
+        </div>
+
+        {{outlet}}
+
+        <div class="row">
+          <div class="col-md-12">
+            <footer class="center-block">
+
+              <a target="_blank" href='mailto:contact@changeons.org'>
+                <i class="fa fa-envelope"></i>
+              </a>
+              <a target="_blank" href="https://twitter.com/ChangeonsOrg">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a target="_blank" href="https://www.facebook.com/changeonsorg">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <p class="copyright">
+                <a target="_blank" href="https://twitter.com/dbachet" alt="© 2015 Damien Bachet">© 2015 Damien Bachet</a>
+              </p>
+
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

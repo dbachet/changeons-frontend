@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource("mailing-list-recipients", {path: "/"}, function() {
+    this.route("new", {path: "/"});
+  });
 });
 
 export default Router;
