@@ -11,19 +11,6 @@ export default Ember.ObjectController.extend({
 
   email: null,
 
-  formattedErrors: function() {
-    var self = this;
-    return self.get("errors").map(
-      function(error) {
-        return self.get("formattedErrorAttribute") + error.message;
-      }
-    );
-  }.property("errors"),
-
-  formattedErrorAttribute: function() {
-    return "L'email ";
-  }.property(""),
-
   hideForm: function() {
     Ember.$(".inputs").hide();
     Ember.$(".notify-me").hide();
