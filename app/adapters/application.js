@@ -2,5 +2,5 @@ import DS from "ember-data";
 
 export default DS.ActiveModelAdapter.extend({
   namespace: "api/v1",
-  host: "changeons-prod.herokuapp.com"
+  host: "http://changeons-prod.herokuapp.com"
 });
