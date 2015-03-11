@@ -9,58 +9,61 @@ body {
   font-weight: 200;
   margin:0;
   padding:0;
-  background-image: url("https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/background_mini.jpg");
+  background: url("https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/background_mini.jpg") no-repeat center center fixed;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover; /* version standardisée */
 }
 
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-  display: flex;
-  align-items: center;
-}
-
-.row.horizontal-center {
-  width: 100%;
-  margin: 0;
-}
-
-.light-background {
+section#logo {
+  padding: 20px 0;
+  img { width: 95% }
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    background-color: rgba(255, 255, 255, 0.4);
-    margin-top: 20px;
-    padding-bottom: 10px;
-    box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.4);
+    padding: 80px 0;
+    img { width: 40% }
   }
+  box-shadow: 0 0 30px #222;
 }
 
-a.home-link {
-  .logo {
-    width: 90%;
+section#main-message {
+  padding: 20px 0;
+  .alert-success { margin-bottom: 0 }
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    padding: 50px 0;
   }
+  .content {
+    font-size: 1.5em;
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      font-size: 2.4em;
+    }
+  }
+  color: #fff;
+  background-color: rgba(52, 73, 95, 0.9);
 }
 
-section#description {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 1.9em;
-
-}
-
-div#top-frame {
-  width: 100%;
-  padding: 40px 0 0;
+section#mailing-form {
+  padding: 10px;
+  background-color: #fff;
+  form.has-errors {
+    ul { list-style: none;}
+    input {
+      border: 1px solid red;
+    }
+  }
   .notify-me {
+    color: #34495f;
     text-align: center;
     font-size: 0.9em;
     margin: 20px 0 4px;
+    font-weight: 400;
     /* Medium devices (desktops, 992px and up) */
     @media (min-width: 992px) {
       font-weight: 200;
     }
-    font-weight: 400;
   }
 
   input#email,
@@ -83,23 +86,24 @@ div#top-frame {
 
   input#email {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #34495f;
     &::-webkit-input-placeholder {
-      color:    rgba(0, 0, 0, 0.5);
+      color: #34495f;
       font-weight: 400;
     }
     &::-moz-placeholder {
-       color:    rgba(0, 0, 0, 0.5);
+       color: #34495f;
        opacity:  1;
        font-weight: 400;
     }
     &::-moz-placeholder {
-       color:    rgba(0, 0, 0, 0.5);
+       color: #34495f;
        opacity:  1;
        font-weight: 400;
     }
     &:-ms-input-placeholder {
-       color:    rgba(0, 0, 0, 0.5);
+       color: #34495f;
        font-weight: 400;
     }
   }
@@ -107,16 +111,6 @@ div#top-frame {
   #btn-save-mailing-list-recipient {
     background-color: #34495f;
     color: #fff;
-  }
-
-  #landing-page {
-    padding: 20px 0 10px;
-    form.has-errors {
-      ul { list-style: none;}
-      input {
-        border: 1px solid red;
-      }
-    }
   }
 
   .mobile-vertical-separator { height: 10px }
@@ -148,27 +142,39 @@ div#top-frame {
 }
 
 footer {
+  background-color: #FFF;
+  color: #34495F;
+  padding: 20px 0 0;
   text-align: center;
-  padding-top: 20px;
   font-size: 1.8em;
-  a { color: #fff; }
+  a { color: #34495F; }
   a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #34495F;
   }
   .copyright { font-size: 0.5em; }
 }
 
 /* This gets Google to fall into place */
-.social-share {
-  font-size: 1px;
-  margin: 40px 0 10px;
+#social-share {
+  div:not(.message) { font-size: 1px; }
+  padding: 0px 0 40px;
+  background-color: rgba(52, 73, 95, 0.9);
   display: none;
   .row div { margin-bottom: 10px }
+  .message {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      font-size: 2.4em;
+      margin-bottom: 60px;
+    }
+  }
 }
 
 /* This gets Facebook to fall into place */
-.social-share iframe {
+#social-share iframe {
   vertical-align: baseline;
 }
 
@@ -176,7 +182,7 @@ footer {
  margin-right:20px;
 }
 /* Set an optional width for your button wrappers */
-.social-share span {
+#social-share span {
   display: inline-block;
   width: 110px;
 }
