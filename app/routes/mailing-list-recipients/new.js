@@ -11,6 +11,7 @@ export default Ember.Route.extend({
       });
 
       self.controller.set("model", mailingListRecipient);
+      self.controller.set("isLoading", true);
 
       mailingListRecipient.save().then(function(){
         self.send("hasSucceeded");
@@ -25,6 +26,7 @@ export default Ember.Route.extend({
       this.controller.send("cleanEmailField");
       // Removes errors from the model
       this.controller.get("model").adapterDidCommit();
+      this.controller.set("isLoading", false);
     },
 
     hasFailed: function(status) {
@@ -33,6 +35,7 @@ export default Ember.Route.extend({
       if (status <= 500) {
         this.controller.set("serverError", "Erreur serveur, veuillez réessayer ultérieurement.");
       }
+      this.controller.set("isLoading", false);
     },
 
     resetServerError: function() {

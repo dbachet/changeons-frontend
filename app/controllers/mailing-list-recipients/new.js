@@ -5,6 +5,8 @@ export default Ember.ObjectController.extend({
 
   serverError: null,
 
+  isLoading: false,
+
   hasErrors: Ember.computed.notEmpty("errors"),
 
   hasSucceeded: false,

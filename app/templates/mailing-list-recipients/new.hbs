@@ -25,7 +25,19 @@
         <div class="col-xs-12 mobile-vertical-separator visible-xs"></div>
         <div class="col-xs-12 col-md-3 no-margin-padding sm md lg">
           <button id="btn-save-mailing-list-recipient" class="btn-block" {{action "create"}}>
-            Envoyer
+            <span class="submit-text">
+              {{#if isLoading}}
+                <div id="form-loading">
+                  <div id="blockG_1" class="form-loading-block">
+                  </div>
+                  <div id="blockG_2" class="form-loading-block">
+                  </div>
+                  <div id="blockG_3" class="form-loading-block">
+                  </div>
+                </div>
+              {{/if}}
+              Envoyer
+            </span>
           </button>
         </div>
       </div>
