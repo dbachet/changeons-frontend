@@ -33,30 +33,37 @@
 
     </script>
 
-    <!-- Facebook share button script -->
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Pinterest share button -->
-    <script type="text/javascript">
-    (function(d){
-        var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
-        p.type = 'text/javascript';
-        p.async = true;
-        p.src = '//assets.pinterest.com/js/pinit.js';
-        f.parentNode.insertBefore(p, f);
-    }(document));
-    </script>
-
     {{content-for 'body'}}
     <script src="assets/vendor.js"></script>
     <script src="assets/changeons-frontend.js"></script>
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js" id="twitter-wjs"></script>
+    <script type="text/javascript">
+      /*
+      * Async Sharing Buttons (G+, Facebook, Twitter)
+      * http://www.narga.net/load-social-button-javascript-asynchronously/
+      * Simple JavaScript function that loads the third-party scripts asynchronously and after the page loads to improve site performance.
+      */
+      (function(doc, script) {
+        var js, fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+            if (doc.getElementById(id)) {
+                return;
+            }
+            js = doc.createElement(script);
+            js.src = url;
+            id && (js.id = id);
+            frag.appendChild(js);
+        };
+
+        // Facebook SDK
+        add('http://connect.facebook.net/fr_FR/all.js#xfbml=1', 'facebook-jssdk');
+        // Twitter SDK
+        add('http://platform.twitter.com/widgets.js');
+        // Pinterest SDK
+        add("http://assets.pinterest.com/js/pinit.js")
+        fjs.parentNode.insertBefore(frag, fjs);
+      }(document, 'script'));
+    </script>
     {{content-for 'body-footer'}}
   </body>
 </html>
