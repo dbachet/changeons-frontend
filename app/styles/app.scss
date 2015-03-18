@@ -29,7 +29,10 @@ section#logo {
 
 section#main-message {
   padding: 20px 0;
-  .alert-success { margin-bottom: 0 }
+  .alert-success {
+    margin-bottom: 0;
+    font-size: 1.7em;
+  }
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     padding: 50px 0;
@@ -54,16 +57,26 @@ section#mailing-form {
       border: 1px solid red;
     }
   }
-  .notify-me {
+
+  .notify-me,
+  .confidential {
     color: #34495f;
     text-align: center;
-    font-size: 0.9em;
-    margin: 20px 0 4px;
     font-weight: 400;
     /* Medium devices (desktops, 992px and up) */
     @media (min-width: 992px) {
       font-weight: 200;
     }
+  }
+
+  .confidential {
+    font-size: 0.8em;
+    margin: 5px 0 0;
+  }
+
+  .notify-me {
+    font-size: 0.9em;
+    margin: 20px 0 4px;
   }
 
   input#email,
@@ -161,6 +174,7 @@ footer {
   padding: 0px 0 40px;
   background-color: rgba(52, 73, 95, 0.9);
   display: none;
+  a { color: #61caf4 }
   .row div { margin-bottom: 10px }
   .message {
     font-size: 1.5em;
