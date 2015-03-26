@@ -32,7 +32,7 @@ export default Ember.ObjectController.extend({
     Ember.$("#social-share").show();
     Ember.$("#social-share div").css({ opacity: 0 });
 
-    Ember.$("body").animate({scrollTop : 0}, 300)
+    Ember.$("body").animate({scrollTop : 0}, 300);
 
     Ember.$("#main-message div").delay(1000).animate({ opacity: 1 }, 500);
     Ember.$("#social-share div").delay(2000).animate({ opacity: 1 }, 500);
