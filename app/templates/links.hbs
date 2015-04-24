@@ -1,0 +1,8 @@
+<section id="shares" class="row">
+  <ul class="col-md-8 col-md-offset-2">
+    {{#each link in model}}
+      {{link-card link=link}}
+    {{/each}}
+  </ul>
+</section>
+{{outlet}}
