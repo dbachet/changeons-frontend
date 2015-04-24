@@ -16,6 +16,36 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      // "simple-auth": {
+      //   serverTokenRevocationEndpoint: '/revoke'
+      // },
+      // torii: {
+      //   providers: {
+      //     'facebook-oauth2': {
+      //       apiKey: '348157698724331',
+      //       redirectUri: 'http://localhost:4200'
+      //     }
+      //   }
+      // }
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'font-src': "'self'",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'report-uri':"'localhost'",
+      'style-src': "'self' 'unsafe-inline'",
+      'frame-src': "'none'"
+    }
+  };
+
+  ENV['torii'] = {
+    providers: {
+      'facebook-oauth2': {
+        apiKey:      '348157698724331',
+        redirectUri: 'http://localhost:4200'
+      }
     }
   };
 

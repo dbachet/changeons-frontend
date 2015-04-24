@@ -5,10 +5,10 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {
-  this.resource("mailing-list-recipients", {path: "/"}, function() {
-    this.route("new", {path: "/"});
-  });
+export default Router.map(function() {
+  // this.resource("mailing-list-recipients", {path: "/"}, function() {
+  //   this.route("new", {path: "/"});
+  // });
+  this.route("logout");
+  this.route("login");
 });
-
-export default Router;

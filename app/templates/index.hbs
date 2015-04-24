@@ -1,0 +1,6 @@
+{{#if session.isAuthenticated}}
+  Welcome logged in user!
+  If you like to logout click {{#link-to 'logout'}}here{{/link-to}}
+{{else}}
+  Click here to {{#link-to 'login'}}login!{{/link-to}}
+{{/if}}
