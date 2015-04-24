@@ -1,40 +1,46 @@
 <div class="container-fluid">
-  <section id="logo" class="row">
-    <div class="col-md-12 text-center">
+  <header class="row">
+    <div id="logo" class="col-md-12 text-center">
       <a href="http://changeons.org" alt="ENSEMBLE, Changeons">
         <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons.png">
       </a>
     </div>
+    <div class="categories col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-10">
+          <a href="#">
+            Catégories
+            <span class="glyphicon glyphicon-triangle-bottom small"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="shares" class="row">
+    <ul class="col-md-8 col-md-offset-2">
+      <li class="link">
+
+      </li>
+      <li class="link">
+
+      </li>
+      <li class="link">
+
+      </li>
+      <li class="link">
+
+      </li>
+      <li class="link">
+
+      </li>
+      <li class="link">
+
+      </li>
+      <li class="link">
+
+      </li>
+    </ul>
   </section>
 
-  <section id="main-message" class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2 text-center content">
-      Relayons l'information sur l'écologie et l'environnement ! Militons&nbsp;ensemble pour une prise de conscience&nbsp;générale !
-    </div>
-  </section>
-
-  <section id="social-share" class="row">
-    <div class="col-xs-12 text-center message">
-      Vous aimez <a href="http://changeons.org">changeons.org</a> ? Parlez en à vos amis !
-    </div>
-
-    <div class="col-xs-4 col-md-2 col-md-offset-3 text-center">
-      {{share-twitter data-url="changeons.org"
-        data-text="Informons-nous les uns, les autres via Changeons.org ! Plus qu'un simple geste, un combat pour la nature"
-        data-hashtags="#Changeons"
-        data-count="vertical"}}
-    </div>
-
-    <div class="col-xs-4 col-md-2 text-center">
-      {{share-facebook data-href="http://changeons.org" data-layout="box_count"}}
-    </div>
-
-    <div class="col-xs-4 col-md-2 pinit text-center">
-      <a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
-    </div>
-  </section>
-
-  {{outlet}}
-
-  {{footer-content}}
 </div>

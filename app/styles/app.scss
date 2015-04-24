@@ -6,183 +6,58 @@ html
 
 body {
   color: #fff;
+  background-color: #f0f2f4;
   font-weight: 200;
   margin:0;
   padding:0;
-  background: url("https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/background_mini.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; /* version standardisée */
+  // background: url("https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/background_mini.jpg") no-repeat center center fixed;
+  // -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover; /* version standardisée */
 }
 
-section#logo {
+body:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 40%;
+  content: "";
+  background: #64c235;
+}
+
+header {
   padding: 20px 0;
-  img { width: 95% }
+  img { width: 65% }
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    padding: 80px 0;
-    img { width: 40% }
+    padding: 40px 0 15px;
+    img { width: 20% }
   }
-  box-shadow: 0 0 30px #222;
+
+  .categories {
+    a, a:hover, a:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+    .glyphicon { top: 2px }
+  }
 }
 
-section#main-message {
-  padding: 20px 0;
-  .alert-success {
-    margin-bottom: 0;
-    font-size: 1.7em;
-  }
-  /* Medium devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-    padding: 50px 0;
-  }
-  .content {
-    font-size: 1.5em;
-    /* Medium devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-      font-size: 2.4em;
-    }
-  }
-  color: #fff;
-  background-color: rgba(52, 73, 95, 0.9);
-}
-
-section#mailing-form {
-  padding: 10px;
-  background-color: #fff;
-  form.has-errors {
-    ul { list-style: none;}
-    input {
-      border: 1px solid red;
-    }
-  }
-
-  .notify-me,
-  .confidential {
-    color: #34495f;
-    text-align: center;
-    font-weight: 400;
-    /* Medium devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-      font-weight: 200;
-    }
-  }
-
-  .confidential {
-    font-size: 0.8em;
-    margin: 5px 0 0;
-  }
-
-  .notify-me {
-    font-size: 0.9em;
-    margin: 20px 0 4px;
-  }
-
-  input#email,
-  #btn-save-mailing-list-recipient {
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    background-image: none;
-    border: none;
-    border-radius: none;
-    -webkit-border-radius:0px;
-    -webkit-appearance: none;
-    &:focus {
-      outline:none;
-      -moz-box-shadow: none !important;
-      -webkit-box-shadow: none !important;
-      box-shadow: none !important;
-    }
-  }
-
-  input#email {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #34495f;
-    &::-webkit-input-placeholder {
-      color: #34495f;
-      font-weight: 400;
-    }
-    &::-moz-placeholder {
-       color: #34495f;
-       opacity:  1;
-       font-weight: 400;
-    }
-    &::-moz-placeholder {
-       color: #34495f;
-       opacity:  1;
-       font-weight: 400;
-    }
-    &:-ms-input-placeholder {
-       color: #34495f;
-       font-weight: 400;
-    }
-  }
-
-  #btn-save-mailing-list-recipient {
-    background-color: #34495f;
-    color: #fff;
-  }
-
-  .mobile-vertical-separator { height: 10px }
-  .no-margin-padding {
-    &.sm {
-      /* Small devices (tablets, 768px and up) */
-      @media (min-width: 768px) {
-        margin: 0;
-        padding: 0;
+section#shares {
+  ul {
+    list-style-type: none;
+    li.link {
+      padding: 0;
+      margin: 0;
+      min-height: 150px;
+      background-color: #fff;
+      &:not(:first-child){
+        border-top: 1px solid #e4e7ee;
       }
-    }
-
-    &.md {
-      /* Medium devices (desktops, 992px and up) */
-      @media (min-width: 992px) {
-        margin: 0;
-        padding: 0;
-      }
-    }
-
-    &.lg {
-      /* Large devices (large desktops, 1200px and up) */
-      @media (min-width: 1200px) {
-        margin: 0;
-        padding: 0;
-      }
-    }
-  }
-}
-
-footer {
-  background-color: #FFF;
-  color: #34495F;
-  padding: 20px 0 0;
-  text-align: center;
-  font-size: 1.8em;
-  a { color: #34495F; }
-  a:hover {
-    text-decoration: none;
-    color: #34495F;
-  }
-  .copyright { font-size: 0.5em; }
-}
-
-/* This gets Google to fall into place */
-#social-share {
-  div:not(.message) { font-size: 1px; }
-  padding: 0px 0 40px;
-  background-color: rgba(52, 73, 95, 0.9);
-  display: none;
-  a { color: #61caf4 }
-  .row div { margin-bottom: 10px }
-  .message {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    /* Medium devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-      font-size: 2.4em;
-      margin-bottom: 60px;
     }
   }
 }
