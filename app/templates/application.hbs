@@ -5,14 +5,29 @@
         <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons.png">
       </a>
     </div>
-    <div class="categories col-md-8 col-md-offset-2">
+    <div class="category-menu col-md-8 col-md-offset-2">
       <div class="row">
-        <div class="col-md-2 col-md-offset-10">
-          <a href="#">
+        <div class="col-md-2 col-md-offset-10 not-expanded">
+          <a href="" {{action "toggleCategoryMenu"}}>
             Catégories
             <span class="glyphicon glyphicon-triangle-bottom small"></span>
           </a>
         </div>
+        {{#if categoryMenuExpanded}}
+          <div class="col-md-2 col-md-offset-10 expanded" {{action "toggleCategoryMenu"}}>
+            <a href="" {{action "toggleCategoryMenu"}}>
+              Catégories
+              <span class="glyphicon glyphicon-triangle-bottom small"></span>
+            </a>
+            {{category-label category="Alimentation" color="#f5841b"}}<br>
+            {{category-label category="Agriculture" color="#914e1b"}}<br>
+            {{category-label category="Environnement" color="#457d24"}}<br>
+            {{category-label category="Habitat" color="#64336e"}}<br>
+            {{category-label category="High-Tech" color="#57575c"}}<br>
+            {{category-label category="Politique" color="#2a82c5"}}<br>
+            {{category-label category="Santé" color="#e0717b"}}<br>
+          </div>
+        {{/if}}
       </div>
     </div>
   </header>
