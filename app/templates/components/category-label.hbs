@@ -1,4 +1,9 @@
 {{#link-to 'links' (query-params category=category)}}
   {{category}}
 {{/link-to}}
+{{#if isCurrentCategory}}
+  {{#link-to 'links' (query-params category="null")}}
+    X
+  {{/link-to}}
+{{/if}}
 {{yield}}

@@ -16,5 +16,17 @@ export default Ember.Controller.extend({
     } else {
       return links;
     }
-  }.property('category', 'model')
+  }.property('category', 'model'),
+
+  categoryMenuExpanded: false,
+
+  actions: {
+    toggleCategoryMenu: function() {
+      if (this.get("categoryMenuExpanded")){
+        this.set("categoryMenuExpanded", false);
+      } else {
+        this.set("categoryMenuExpanded", true);
+      }
+    }
+  }
 });

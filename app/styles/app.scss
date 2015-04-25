@@ -32,33 +32,35 @@ header {
     padding: 40px 0 15px;
     img { width: 20% }
   }
+}
 
-  .category-menu {
+.category-menu {
 
-    .not-expanded, .expanded {
-      padding: 10px;
-      .glyphicon { top: 2px }
+  .not-expanded, .expanded {
+    padding: 10px;
+    .glyphicon { top: 2px }
+  }
+
+  .not-expanded {
+    position: relative;
+    a, a:hover, a:visited {
+      color: #fff;
+      text-decoration: none;
     }
-    .not-expanded {
-      position: relative;
+  }
+
+  .expanded {
+    position: absolute;
+    z-index: 100;
+    background: #f7f9fb;
+    a, a:hover, a:visited {
+      color: #64c235;
+      text-decoration: none;
+    }
+    .category-label {
+      margin-top: 5px;
       a, a:hover, a:visited {
         color: #fff;
-        text-decoration: none;
-      }
-    }
-    .expanded {
-      position: absolute;
-      z-index: 100;
-      background: #f7f9fb;
-      a, a:hover, a:visited {
-        color: #64c235;
-        text-decoration: none;
-      }
-      .category-label {
-        margin-top: 5px;
-        a, a:hover, a:visited {
-          color: #fff;
-        }
       }
     }
   }
