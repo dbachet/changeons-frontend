@@ -5,5 +5,7 @@ export default DS.Model.extend({
   url: DS.attr("string"),
   language: DS.attr("string"),
   category: DS.attr("string"),
-  user: DS.attr("string")
+  categoryColor: DS.attr("string"),
+  user: DS.attr("string"),
+  createdAt: DS.attr("date")
 });

@@ -1,4 +1,18 @@
-<li class="link">
-  {{link.name}}
-</li>
-{{yield}}
+<div class="row">
+  <div class="col-md-12">
+    {{category-label category=link.category color=link.categoryColor}}
+    <span class="name">
+      <a href="{{link.url}}">{{link.name}}</a>
+    </span>
+    <span class="language small">
+      ({{link.language}})
+    </span>
+    {{yield}}
+  </div>
+</div>
+<div class="row">
+  <div class="shared-by col-md-6">
+  Partagé par {{link.user}} {{timeAgo}}
+  </div>
+</div>
+

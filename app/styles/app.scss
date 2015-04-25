@@ -51,16 +51,35 @@ section#shares {
   ul {
     list-style-type: none;
     li.link {
+      font-size: 1.5em;
       color: #777;
-      padding: 0;
+      padding: 20px 20px;
       margin: 0;
       min-height: 150px;
       background-color: #fff;
       &:not(:first-child){
         border-top: 1px solid #e4e7ee;
       }
+      span.name {
+        a, a:hover {
+          color: #64c235;
+        }
+        margin-left: 10px;
+      }
+      span.language {
+        text-transform: lowercase;
+      }
+      div.shared-by {
+        margin: 20px 0 0;
+      }
     }
   }
+}
+
+.category-label {
+  padding: 2px 5px;
+  display: inline;
+  color: #fff;
 }
 
 /* This gets Facebook to fall into place */
