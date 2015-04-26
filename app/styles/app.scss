@@ -20,13 +20,21 @@ body:before {
   z-index: -1;
   width: 100%;
   height: 260px;
+  /* Small devices (desktops, 768px and up) */
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    height: 260px;
+  }
   content: "";
   background: #64c235;
 }
 
 header {
   padding: 20px 0;
-  img { width: 65% }
+  img { width: 85% }
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     padding: 40px 0 15px;
@@ -35,10 +43,34 @@ header {
 }
 
 .category-menu {
-
+  font-size: 2em;
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    font-size: 1em;
+  }
   .not-expanded, .expanded {
     padding: 10px;
-    .glyphicon { top: 2px }
+    text-align: center;
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      text-align: initial;
+    }
+    .category-label {
+      .glyphicon {
+        top: 6px;
+        /* Medium devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+          top: 2px;
+        }
+      }
+    }
+    .glyphicon {
+      top: 4px;
+      /* Medium devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
+        top: 2px;
+      }
+    }
   }
 
   .not-expanded {
@@ -59,6 +91,11 @@ header {
     }
     .category-label {
       margin-top: 5px;
+      width: 80%;
+      /* Medium devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
+        width: initial;
+      }
       a, a:hover, a:visited {
         color: #fff;
       }
