@@ -5,6 +5,34 @@
         <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons.png">
       </a>
     </div>
+    <div class="category-menu col-xs-12 col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-10 col-xs-12 not-expanded">
+          <a href="" {{action "expandCategoryMenu"}}>
+            Catégories
+            <span class="glyphicon glyphicon-triangle-bottom small"></span>
+          </a>
+        </div>
+        {{#if categoryMenuIsExpanded}}
+          <div class="col-md-2 col-md-offset-10 col-xs-12 expanded">
+            <a href="" {{action "expandCategoryMenu"}}>
+              Catégories
+              <span class="glyphicon glyphicon-triangle-top small"></span>
+            </a>
+            <br>
+            {{category-label category="Alimentation" color="#f5841b" currentCategory=currentCategory}}<br>
+            {{category-label category="Agriculture" color="#914e1b" currentCategory=currentCategory}}<br>
+            {{category-label category="Environnement" color="#457d24" currentCategory=currentCategory}}<br>
+            {{category-label category="Habitat" color="#64336e" currentCategory=currentCategory}}<br>
+            {{category-label category="High-Tech" color="#57575c" currentCategory=currentCategory}}<br>
+            {{category-label category="Politique" color="#2a82c5" currentCategory=currentCategory}}<br>
+            {{category-label category="Santé" color="#e0717b" currentCategory=currentCategory}}<br>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="clearfix visible-sm-block"></div>
   </header>
 
   {{outlet}}
