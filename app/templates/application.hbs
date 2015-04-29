@@ -5,10 +5,22 @@
         <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons.png">
       </a>
     </div>
-    {{category-menu currentCategory=currentCategory}}
-    <div class="clearfix visible-xs-block"></div>
-    <div class="clearfix visible-sm-block"></div>
+    {{header-menu currentCategory=currentCategory applicationController=controller}}
   </header>
+
+  {{#if showFixedTopBar}}
+    <div class="fixed-top-bar row">
+      <div id="logo" class="col-md-1 col-md-offset-2 col-xs-3">
+        <a href="http://changeons.org" alt="ENSEMBLE, Changeons">
+          <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/papillon.png">
+        </a>
+      </div>
+      <div class="col-xs-9 col-md-2 col-md-offset-5">
+        {{category-menu currentCategory=currentCategory locatedInFixedTopBar=true}}
+      </div>
+    </div>
+  {{/if}}
+
 
   {{outlet}}
 

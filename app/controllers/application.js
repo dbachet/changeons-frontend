@@ -4,5 +4,7 @@ export default Ember.Controller.extend({
   needs: "links",
   linksController: Ember.computed.alias("controllers.links"),
 
-  currentCategory: Ember.computed.alias("linksController.category")
+  currentCategory: Ember.computed.alias("linksController.category"),
+
+  showFixedTopBar: null
 });

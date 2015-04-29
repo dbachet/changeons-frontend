@@ -19,14 +19,14 @@ body:before {
   right: 0;
   z-index: -1;
   width: 100%;
-  height: 260px;
+  height: 310px;
   /* Small devices (desktops, 768px and up) */
   @media (min-width: 768px) {
     height: 400px;
   }
-  /* Medium devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-    height: 260px;
+  /* Extra large devices (extra large desktops, 1600px and up) */
+  @media (min-width: 1600px) {
+    height: 500px;
   }
   content: "";
   background: #64c235;
@@ -46,7 +46,11 @@ header {
   font-size: 1.8em;
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    font-size: 1em;
+    font-size: 1.5em;
+  }
+  /* Extra large devices (extra large desktops, 1600px and up) */
+  @media (min-width: 1600px) {
+    font-size: 2em;
   }
   .not-expanded, .expanded {
     padding: 10px;
@@ -54,15 +58,6 @@ header {
     /* Medium devices (desktops, 992px and up) */
     @media (min-width: 992px) {
       text-align: initial;
-    }
-    .category-label {
-      .glyphicon {
-        top: 6px;
-        /* Medium devices (desktops, 992px and up) */
-        @media (min-width: 992px) {
-          top: 2px;
-        }
-      }
     }
     .glyphicon {
       top: 4px;
@@ -98,6 +93,67 @@ header {
       }
       a, a:hover, a:visited {
         color: #fff;
+      }
+      .glyphicon {
+        top: 5px;
+        /* Medium devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+          top: 3px;
+        }
+        /* Extra large devices (extra large desktops, 1600px and up) */
+        @media (min-width: 1600px) {
+          top: 4px;
+        }
+      }
+    }
+  }
+}
+
+.fixed-top-bar {
+  width: 100%;
+  top: 0;
+  background: #64c235;
+  z-index: 100;
+  position: fixed;
+  img {
+    height: 35px;
+    margin-top: 7px;
+    margin-left: 15px;
+  }
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    img {
+      height: 25px;
+      margin-top: 8px;
+      margin-left: 30px;
+    }
+  }
+  /* Extra large devices (extra large desktops, 1600px and up) */
+  @media (min-width: 1600px) {
+    img {
+      height: 46px;
+      margin-top: 12px;
+    }
+  }
+  .category-menu {
+    font-size: 1.4em;
+    /* Small devices (desktops, 768px and up) */
+    @media (min-width: 768px) {
+      font-size: 2em;
+    }
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      font-size: 1.1em;
+    }
+    /* Extra large devices (extra large desktops, 1600px and up) */
+    @media (min-width: 1600px) {
+      font-size: 2.4em;
+    }
+    .category-label .glyphicon {
+      top: 4px;
+      /* Medium devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
+        top: 3px;
       }
     }
   }
