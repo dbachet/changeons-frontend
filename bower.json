@@ -19,6 +19,7 @@
     "ember-mocha-adapter": "WMeldon/ember-mocha-adapter#qunit",
     "sinon": "~1.10.2",
     "bootstrap": "~3.3.2",
-    "ember-addons.bs_for_ember": "~0.7.0"
+    "ember-addons.bs_for_ember": "~0.7.0",
+    "moment": "~2.10.2"
   }
 }

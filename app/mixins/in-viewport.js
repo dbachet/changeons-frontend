@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-  scrollTimeout:      100,
+  scrollTimeout:      15,
   boundingClientRect: 0,
   windowHeight:       0,
   windowWidth:        0,

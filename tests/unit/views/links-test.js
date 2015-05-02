@@ -1,12 +1,12 @@
-import {
-  moduleFor,
-  test
-} from 'ember-qunit';
+// import {
+//   moduleFor,
+//   test
+// } from 'ember-qunit';
 
-moduleFor('view:links');
+// moduleFor('view:links');
 
-// Replace this with your real tests.
-test('it exists', function(assert) {
-  var view = this.subject();
-  assert.ok(view);
-});
+// // Replace this with your real tests.
+// test('it exists', function(assert) {
+//   var view = this.subject();
+//   assert.ok(view);
+// });
