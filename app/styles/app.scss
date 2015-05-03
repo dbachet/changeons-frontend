@@ -41,11 +41,11 @@ header {
   img { width: 85% }
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    padding: 40px 0 15px;
-    img { width: 32% }
-  }
-  blockquote {
-    font-size: 0.9em;
+    padding: 0px 0 15px;
+    img {
+      height: 60%;
+      width: 60%;
+    }
   }
 }
 
