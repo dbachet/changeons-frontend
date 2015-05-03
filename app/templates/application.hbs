@@ -1,9 +1,28 @@
 <div class="container-fluid">
   <header class="row">
-    <div id="logo" class="col-md-2 col-md-offset-2 text-center">
-      <a href="http://changeons.org" alt="ENSEMBLE, Changeons">
-        <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons-square.png">
-      </a>
+    <div class="col-md-6 col-md-offset-3 text-center">
+      <ul id="navigation-menu">
+        <li id="logo">
+          <a href="http://changeons.org" alt="ENSEMBLE, Changeons">
+            <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons-square.png">
+          </a>
+        </li>
+        <li>
+          {{#link-to "links"}}
+            ACCUEIL
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to "about"}}
+            A PROPOS
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to "contact"}}
+            CONTACT
+          {{/link-to}}
+        </li>
+      </ul>
     </div>
     {{header-menu currentCategory=currentCategory applicationController=controller}}
   </header>

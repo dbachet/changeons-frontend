@@ -43,8 +43,30 @@ header {
   @media (min-width: 992px) {
     padding: 0px 0 15px;
     img {
-      height: 60%;
-      width: 60%;
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  ul#navigation-menu {
+    display: table;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    li {
+      width: 25%;
+      display: table-cell;
+      a, a:hover, a:visited, a:focus {
+        color: #fff;
+        font-weight: 400;
+        text-decoration: none;
+        &.active {
+          padding-bottom: 10px;
+          border-bottom: 3px solid #FFF;
+        }
+      }
     }
   }
 }
