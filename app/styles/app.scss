@@ -22,7 +22,7 @@ body:before {
   height: 310px;
   /* Small devices (desktops, 768px and up) */
   @media (min-width: 768px) {
-    height: 400px;
+    height: 600px;
   }
   /* Extra large devices (extra large desktops, 1600px and up) */
   @media (min-width: 1600px) {
@@ -67,6 +67,18 @@ header {
           border-bottom: 3px solid #FFF;
         }
       }
+    }
+  }
+
+  .opening-lines {
+    padding: 70px 0;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0px 1px 1px #000;
+    h1 {
+      font-weight: 200;
+    }
+    h4 {
+      font-weight: 200;
     }
   }
 }
