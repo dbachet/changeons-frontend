@@ -38,7 +38,7 @@ header {
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     padding: 40px 0 15px;
-    img { width: 20% }
+    img { width: 32% }
   }
   blockquote {
     font-size: 0.9em;
@@ -158,6 +158,19 @@ header {
       @media (min-width: 992px) {
         top: 3px;
       }
+    }
+  }
+}
+
+.more {
+  background: #fff;
+  padding: 20px;
+  color: #777;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      margin-top: 10px;
     }
   }
 }
