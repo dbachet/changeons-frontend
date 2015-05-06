@@ -2,16 +2,16 @@
   <div class="col-md-12">
     {{category-label category=link.category color=link.categoryColor}}
     <span class="name">
-      <a href="{{link.url}}" target="blank">{{link.name}}</a>
+      <a href="{{link.url}}" target="blank">
+        {{link.shortName}}&nbsp;<span class="language small">({{link.language}})</span>
+      </a>
     </span>
-    <span class="language small">
-      ({{link.language}})
-    </span>
+
     {{yield}}
   </div>
 </div>
 <div class="row">
-  <div class="shared-by col-md-6">
+  <div class="shared-by col-md-12">
   Partagé par {{link.user}} {{timeAgo}}
   </div>
 </div>

@@ -7,5 +7,14 @@ export default DS.Model.extend({
   category: DS.attr("string"),
   categoryColor: DS.attr("string"),
   user: DS.attr("string"),
-  createdAt: DS.attr("date")
+  createdAt: DS.attr("date"),
+
+  shortName: function() {
+    var name = this.get("name").substring(0, 120);
+    if (this.get("name").length >= 120) {
+      return name + "...";
+    } else {
+      return name;
+    }
+  }.property("name")
 });

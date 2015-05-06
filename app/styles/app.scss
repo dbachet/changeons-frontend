@@ -217,9 +217,9 @@ section#shares {
   ul {
     list-style-type: none;
     li.link {
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: #777;
-      padding: 20px 20px;
+      padding: 40px;
       margin: 0;
       min-height: 150px;
       background-color: #fff;
@@ -228,12 +228,13 @@ section#shares {
       }
       span.name {
         a, a:hover {
-          color: #64c235;
+          color: #457D24;
+          span.language {
+            color: #777;
+            text-transform: lowercase;
+          }
         }
         margin-left: 10px;
-      }
-      span.language {
-        text-transform: lowercase;
       }
       div.shared-by {
         margin: 20px 0 0;
