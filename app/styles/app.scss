@@ -122,7 +122,7 @@ header {
     z-index: 100;
     background: #f7f9fb;
     a, a:hover, a:visited {
-      color: #64c235;
+      color: #2e3d4d;
       text-decoration: none;
     }
     .category-label {
@@ -153,13 +153,12 @@ header {
 .fixed-top-bar {
   width: 100%;
   top: 0;
-  background: #64c235;
+  background: #2e3d4d;
   z-index: 100;
   position: fixed;
   img {
     height: 35px;
     margin-top: 7px;
-    margin-left: 15px;
   }
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
