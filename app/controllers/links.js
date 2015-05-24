@@ -1,21 +1,10 @@
-import Ember from 'ember';
+import Ember from "ember";
 /* global moment */
 
 export default Ember.Controller.extend({
   init: function(){
-    moment.locale('fr');
+    moment.locale("fr");
   },
-  queryParams: ['category'],
-  category: null,
-
-  filteredArticles: function() {
-    var category = this.get('category');
-    var links = this.get('model');
-
-    if (category) {
-      return links.filterBy('category', category);
-    } else {
-      return links;
-    }
-  }.property('category', 'model')
+  queryParams: ["category"],
+  category: null
 });
