@@ -215,6 +215,7 @@ header {
 section#shares {
   ul {
     list-style-type: none;
+    padding: 0;
     li.link {
       font-size: 1.2em;
       color: #777;
@@ -238,6 +239,22 @@ section#shares {
       div.shared-by {
         margin: 20px 0 0;
       }
+    }
+  }
+}
+
+.pagination {
+  li {
+    a {
+      color: #2e3d4d;
+      cursor: pointer;
+      cursor: hand;
+    }
+    &.active a,
+    &.active a:hover,
+    &.active a:active {
+      background-color: #2e3d4d;
+      border-color: #2e3d4d;
     }
   }
 }

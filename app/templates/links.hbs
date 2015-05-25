@@ -1,10 +1,13 @@
 <div class="row">
-  <section id="shares">
-    <ul class="col-md-5 col-md-offset-2">
+  <section id="shares" class="col-md-5 col-md-offset-2">
+    <ul>
       {{#each link in model}}
         {{link-card link=link}}
       {{/each}}
     </ul>
+    <div class="pagination-bar text-center">
+      {{page-numbers content=content}}
+    </div>
   </section>
   <div class="col-md-3 more">
     <p class="lead">

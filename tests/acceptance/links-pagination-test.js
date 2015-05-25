@@ -21,6 +21,6 @@ test('checking if links pagination is properly displayed', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/links-pagination');
+    assert.equal(find(".pagination-bar").length, 1);
   });
 });
