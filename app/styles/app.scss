@@ -19,7 +19,7 @@ body:before {
   right: 0;
   z-index: -1;
   width: 100%;
-  height: 310px;
+  height: 430px;
   /* Small devices (desktops, 768px and up) */
   @media (min-width: 768px) {
     height: 600px;
@@ -29,7 +29,8 @@ body:before {
     height: 500px;
   }
   content: "";
-  background: url("https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/background_mini.jpg") no-repeat center center;
+  background-color: #64c235;
+  background-image: url("https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/background_mini.jpg");
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -55,6 +56,11 @@ header {
     list-style: none;
     text-align: center;
     width: 100%;
+    font-size: 0.8em;
+    /* Small devices (desktops, 768px and up) */
+    @media (min-width: 768px) {
+      font-size: 1em;
+    }
     li {
       width: 25%;
       display: table-cell;
@@ -71,20 +77,33 @@ header {
   }
 
   .opening-lines {
-    padding: 70px 0;
+    padding: 10px 0;
     -webkit-font-smoothing: antialiased;
     text-shadow: 0px 1px 1px #000;
+    /* Small devices (desktops, 768px and up) */
+    @media (min-width: 768px) {
+      padding: 70px 0;
+    }
     h1 {
       font-weight: 200;
+
+      /* Extra small devices (smartphones, 768px and less) */
+      @media (max-width: 768px) {
+        font-size: 2em;
+      }
     }
     h4 {
       font-weight: 200;
+      /* Extra small devices (smartphones, 768px and less) */
+      @media (max-width: 768px) {
+        font-size: 1.3em;
+      }
     }
   }
 }
 
 .category-menu {
-  font-size: 1.8em;
+  font-size: 1.3em;
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     font-size: 1.5em;
@@ -136,7 +155,11 @@ header {
         color: #fff;
       }
       .glyphicon {
-        top: 5px;
+        top: 4px;
+        /* Small devices (desktops, 768px and up) */
+        @media (min-width: 768px) {
+          top: 3px;
+        }
         /* Medium devices (desktops, 992px and up) */
         @media (min-width: 992px) {
           top: 3px;
@@ -157,15 +180,20 @@ header {
   z-index: 100;
   position: fixed;
   img {
-    height: 35px;
+    height: 25px;
     margin-top: 7px;
+  }
+  /* Small devices (desktops, 768px and up) */
+  @media (min-width: 768px) {
+    img {
+      height: 45px;
+    }
   }
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     img {
       height: 25px;
       margin-top: 8px;
-      margin-left: 30px;
     }
   }
   /* Extra large devices (extra large desktops, 1600px and up) */
@@ -176,7 +204,7 @@ header {
     }
   }
   .category-menu {
-    font-size: 1.4em;
+    font-size: 1em;
     /* Small devices (desktops, 768px and up) */
     @media (min-width: 768px) {
       font-size: 2em;
@@ -190,7 +218,11 @@ header {
       font-size: 2.4em;
     }
     .category-label .glyphicon {
-      top: 4px;
+      top: 3px;
+      /* Small devices (desktops, 768px and up) */
+      @media (min-width: 768px) {
+        top: 4px;
+      }
       /* Medium devices (desktops, 992px and up) */
       @media (min-width: 992px) {
         top: 3px;
