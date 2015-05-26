@@ -249,12 +249,18 @@ section#shares {
     list-style-type: none;
     padding: 0;
     li.link {
-      font-size: 1.2em;
+      font-size: 1em;
       color: #777;
-      padding: 40px;
+      padding: 20px;
       margin: 0;
-      min-height: 150px;
+      min-height: 100px;
       background-color: #fff;
+      /* Samll devices (desktops, 768px and up) */
+      @media (min-width: 768px) {
+        font-size: 1.2em;
+        padding: 40px;
+        min-height: 150px;
+      }
       &:not(:first-child){
         border-top: 1px solid #e4e7ee;
       }
