@@ -3,9 +3,9 @@
     <div class="col-md-6 col-md-offset-3 text-center">
       <ul id="navigation-menu">
         <li id="logo">
-          <a href="http://changeons.org" alt="ENSEMBLE, Changeons">
+          {{#link-to "links"}}
             <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons-square.png">
-          </a>
+          {{/link-to}}
         </li>
         <li>
           {{#link-to "links"}}
@@ -34,14 +34,14 @@
   {{#if showFixedTopBar}}
     <div class="fixed-top-bar row">
       <div id="logo" class="col-sm-3 col-md-2 col-md-offset-2 hidden-xs">
-        <a href="http://changeons.org" alt="ENSEMBLE, Changeons">
+        {{#link-to "links"}}
           <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons-horizontal.png">
-        </a>
+        {{/link-to}}
       </div>
       <div id="logo" class="col-xs-3 visible-xs-block">
-        <a href="http://changeons.org" alt="ENSEMBLE, Changeons">
+        {{#link-to "links"}}
           <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/papillon.png">
-        </a>
+        {{/link-to}}
       </div>
       <div class="col-xs-9 col-sm-6 col-sm-offset-3 col-md-2 col-md-offset-4">
         {{category-menu currentCategory=currentCategory locatedInFixedTopBar=true}}
