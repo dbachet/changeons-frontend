@@ -28,9 +28,11 @@
         {{link-card link=link}}
       {{/each}}
     </ul>
-    <div class="pagination-bar text-center">
-      {{page-numbers content=content}}
-    </div>
+    {{#if displayPaginationBar }}
+      <div class="pagination-bar text-center">
+        {{page-numbers content=content}}
+      </div>
+    {{/if}}
   </section>
 
   {{outlet}}
