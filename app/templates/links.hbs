@@ -1,5 +1,28 @@
 <div class="row">
-  <section id="shares" class="col-md-5 col-md-offset-2">
+  <div class="col-md-3 col-md-push-7 more">
+    <div class="wrapper">
+      <p class="lead">
+        L'idée vous plaît ?
+      </p>
+      <ul>
+        <li>
+          Suivez notre compte Twitter !<br>
+          <a class="twitter-follow-button"
+            href="https://twitter.com/changeonsorg"
+            data-show-count="true"
+            data-lang="fr">
+          Suivre @ChangeonsOrg
+          </a>
+          <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+        </li>
+        <li>
+          Aimez notre page Facebook !<br>
+          <div class="fb-like" data-href="https://www.facebook.com/changeonsorg" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section id="shares" class="col-md-5 col-md-offset-2 col-md-pull-3">
     <ul>
       {{#each link in model}}
         {{link-card link=link}}
@@ -9,26 +32,6 @@
       {{page-numbers content=content}}
     </div>
   </section>
-  <div class="col-md-3 more">
-    <p class="lead">
-      L'idée vous plaît ?
-    </p>
-    <ul>
-      <li>
-        Suivez notre compte Twitter !<br>
-        <a class="twitter-follow-button"
-          href="https://twitter.com/changeonsorg"
-          data-show-count="true"
-          data-lang="fr">
-        Suivre @ChangeonsOrg
-        </a>
-        <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
-      </li>
-      <li>
-        Aimez notre page Facebook !<br>
-        <div class="fb-like" data-href="https://www.facebook.com/changeonsorg" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-      </li>
-    </ul>
-    </div>
+
   {{outlet}}
 </div>
