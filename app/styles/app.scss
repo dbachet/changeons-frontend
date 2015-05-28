@@ -352,6 +352,7 @@ footer {
   color: #2E3D4D;
   padding-top: 50px;
   padding-bottom: 20px;
+  font-size: 1.2em;
   .navigation {
     text-align: right;
   }
@@ -361,9 +362,15 @@ footer {
   }
   ul {
     list-style-type: none;
+    a.active {
+      border-right: 3px solid #2E3D4D;
+      padding-right: 5px;
+    }
     a,
     a:hover,
-    a:visited {
+    a:visited,
+    a:active,
+    a:link {
       color: #2E3D4D;
       text-decoration: none;
     }
