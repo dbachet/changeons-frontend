@@ -6,5 +6,6 @@ export default Ember.Controller.extend({
 
   currentCategory: Ember.computed.alias("linksController.category"),
 
-  showFixedTopBar: null
+  showFixedTopBar: null,
+  showBackToTopButton: null
 });

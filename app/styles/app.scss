@@ -309,8 +309,26 @@ section#shares {
   }
 }
 
+.back-to-top {
+  background: none;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  z-index: 100;
+  border: none;
+  color: #ffffff;
+  background-color: #2E3D4D;
+  i {
+    font-size: 2em;
+  }
+}
+
 section#about,
-section#contact {
+section#contact,
+section#credits {
   background: #fff;
   padding: 80px;
   color: #777;
