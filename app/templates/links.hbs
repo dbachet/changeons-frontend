@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-3 col-md-push-7 more">
+    <div class="wrapper">
+      <p class="lead">
+        L'idée vous plaît ?
+      </p>
+      <ul class="social-buttons">
+        <li>
+          Suivez notre compte Twitter !<br>
+          {{follow-twitter}}
+        </li>
+        <li>
+          Aimez notre page Facebook !<br>
+          {{like-facebook}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section id="shares" class="col-md-5 col-md-offset-2 col-md-pull-3">
+    <ul>
+      {{#each link in model}}
+        {{link-card link=link}}
+      {{/each}}
+    </ul>
+    {{#if displayPaginationBar }}
+      <div class="pagination-bar text-center">
+        {{page-numbers content=content}}
+      </div>
+    {{/if}}
+  </section>
+
+  {{outlet}}
+</div>

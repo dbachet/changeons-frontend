@@ -1,40 +1,78 @@
 <div class="container-fluid">
-  <section id="logo" class="row">
-    <div class="col-md-12 text-center">
-      <a href="http://changeons.org" alt="ENSEMBLE, Changeons">
-        <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons.png">
-      </a>
+  <header class="row">
+    <div class="col-md-6 col-md-offset-3 text-center">
+      <ul id="navigation-menu">
+        <li id="logo">
+          {{#link-to "links"}}
+            <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons-square.png">
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to "links"}}
+            ACCUEIL
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to "about"}}
+            A PROPOS
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to "contact"}}
+            CONTACT
+          {{/link-to}}
+        </li>
+      </ul>
     </div>
-  </section>
+    <div class="col-md-6 col-md-offset-3 text-center opening-lines">
+      <h1>Partageons l'information sur&nbsp;le&nbsp;respect de&nbsp;l'environnement</h1>
+      <h4>Changeons pour une société plus solidaire</h4>
+    </div>
+    {{header-menu currentCategory=currentCategory applicationController=controller}}
+  </header>
 
-  <section id="main-message" class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2 text-center content">
-      Relayons l'information sur l'écologie et l'environnement ! Militons&nbsp;ensemble pour une prise de conscience&nbsp;générale !
+  {{#if showFixedTopBar}}
+    <div class="fixed-top-bar row">
+      <div id="logo" class="col-sm-3 col-md-2 col-md-offset-2 hidden-xs">
+        {{#link-to "links"}}
+          <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/logo-changeons-horizontal.png">
+        {{/link-to}}
+      </div>
+      <div id="logo" class="col-xs-3 visible-xs-block">
+        {{#link-to "links"}}
+          <img src="https://s3-eu-west-1.amazonaws.com/changeons-prod/assets/images/papillon.png">
+        {{/link-to}}
+      </div>
+      <div class="col-xs-9 col-sm-6 col-sm-offset-3 col-md-2 col-md-offset-4">
+        {{category-menu currentCategory=currentCategory locatedInFixedTopBar=true}}
+      </div>
     </div>
-  </section>
+  {{/if}}
 
-  <section id="social-share" class="row">
-    <div class="col-xs-12 text-center message">
-      Vous aimez <a href="http://changeons.org">changeons.org</a> ? Parlez en à vos amis !
-    </div>
-
-    <div class="col-xs-4 col-md-2 col-md-offset-3 text-center">
-      {{share-twitter data-url="changeons.org"
-        data-text="Informons-nous les uns, les autres via Changeons.org ! Plus qu'un simple geste, un combat pour la nature"
-        data-hashtags="#Changeons"
-        data-count="vertical"}}
-    </div>
-
-    <div class="col-xs-4 col-md-2 text-center">
-      {{share-facebook data-href="http://changeons.org" data-layout="box_count"}}
-    </div>
-
-    <div class="col-xs-4 col-md-2 pinit text-center">
-      <a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
-    </div>
-  </section>
+  {{#if showBackToTopButton}}
+    {{back-to-top-button}}
+  {{/if}}
 
   {{outlet}}
-
-  {{footer-content}}
+  <footer class="row">
+    <ul class="social col-xs-8 col-md-4 col-md-offset-2">
+      <li>
+        Suivez notre compte Twitter !<br>
+        {{follow-twitter}}
+      </li>
+      <li>
+        Aimez notre page Facebook !<br>
+        {{like-facebook}}
+      </li>
+    </ul>
+    <ul class="col-xs-4 col-md-1 navigation">
+      <li>{{#link-to "links" }}Accueil{{/link-to}}</li>
+      <li>{{#link-to "about" }}A propos{{/link-to}}</li>
+      <li>{{#link-to "contact" }}Contact{{/link-to}}</li>
+      <li>{{#link-to "credits" }}Crédits{{/link-to}}</li>
+    </ul>
+    <div class="col-xs-8 col-xs-offset-2 col-md-5 col-md-offset-2 copyright">
+      Retrouvez le code source du site sur <a href="https://github.com/dbachet/changeons-frontend">Github</a> - <a target="_blank" href="https://twitter.com/dbachet" alt="© 2015 Damien Bachet">© 2015 Damien Bachet</a>
+    </div>
+  </footer>
 </div>

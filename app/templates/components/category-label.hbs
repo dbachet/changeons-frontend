@@ -1,0 +1,11 @@
+{{#link-to 'links' (query-params category=category)}}
+  {{category}}
+{{/link-to}}
+
+{{#if isCurrentCategory}}
+  {{#link-to 'links' (query-params category="null")}}
+    <span class="separator">|</span>
+    <span class="reset-query-param glyphicon glyphicon-remove-circle"></span>
+  {{/link-to}}
+{{/if}}
+{{yield}}

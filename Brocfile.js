@@ -38,4 +38,7 @@ app.import("bower_components/font-awesome/fonts/fontawesome-webfont.ttf", { dest
 app.import("bower_components/font-awesome/fonts/fontawesome-webfont.woff", { destDir: "fonts" });
 app.import("bower_components/font-awesome/fonts/FontAwesome.otf", { destDir: "fonts" });
 
+app.import("bower_components/moment/moment.js");
+app.import('vendor/moment-with-locales/moment-with-locales.js');
+
 module.exports = app.toTree();
