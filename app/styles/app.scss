@@ -348,6 +348,28 @@ section#credits {
   }
 }
 
+footer {
+  color: #2E3D4D;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  .navigation {
+    text-align: right;
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 50px;
+  }
+  ul {
+    list-style-type: none;
+    a,
+    a:hover,
+    a:visited {
+      color: #2E3D4D;
+      text-decoration: none;
+    }
+  }
+}
+
 /* This gets Facebook to fall into place */
 #social-share iframe {
   vertical-align: baseline;
