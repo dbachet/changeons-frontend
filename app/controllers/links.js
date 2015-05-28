@@ -17,6 +17,6 @@ export default Ember.Controller.extend({
   // set default values, can cause problems if left out
   // if value matches default, it won't display in the URL
   page: 1,
-  perPage: 25,
+  perPage: 10,
   displayPaginationBar: Ember.computed.gt('content.totalPages', 1)
 });
