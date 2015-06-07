@@ -7,7 +7,7 @@ import startApp from 'changeons-frontend/tests/helpers/start-app';
 
 var application;
 
-module('Acceptance: LinksPagination', {
+module('Acceptance: SharesPagination', {
   beforeEach: function() {
     application = startApp();
   },
@@ -17,10 +17,10 @@ module('Acceptance: LinksPagination', {
   }
 });
 
-test('checking if links pagination is properly displayed', function(assert) {
+test('checking if shares pagination is properly displayed', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(find(".pagination-bar").length, 1);
+    assert.equal(find(".pagination-bar").length, 2);
   });
 });

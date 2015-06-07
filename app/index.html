@@ -33,9 +33,6 @@
 
     </script>
 
-    {{content-for 'body'}}
-    <script src="assets/vendor.js"></script>
-    <script src="assets/changeons-frontend.js"></script>
     <script type="text/javascript">
       /*
       * Async Sharing Buttons (G+, Facebook, Twitter)
@@ -64,6 +61,11 @@
         fjs.parentNode.insertBefore(frag, fjs);
       }(document, 'script'));
     </script>
+
+    {{content-for 'body'}}
+    <script src="assets/vendor.js"></script>
+    <script src="assets/changeons-frontend.js"></script>
+
     {{content-for 'body-footer'}}
   </body>
 </html>

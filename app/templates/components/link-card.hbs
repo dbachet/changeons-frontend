@@ -1,18 +1,24 @@
-<div class="row">
-  <div class="col-md-12">
-    {{category-label category=link.category color=link.categoryColor}}
-    <span class="name">
-      <a href="{{link.url}}" target="blank">
-        {{link.shortName}}&nbsp;<span class="language small">({{link.language}})</span>
-      </a>
-    </span>
-
-    {{yield}}
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-4 col-md-4">
+        {{category-label category=link.category color=link.categoryColor}}
+      </div>
+      <div class="col-xs-8 col-md-8 text-right">Partagé par {{link.user}}</div>
+      <div class="col-xs-12 col-md-12">
+        <a href="{{link.url}}" target="blank">
+          <p class="name text-justify">
+            {{link.name}}
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="date col-md-12">
+        {{formattedCreatedAt}}
+      </div>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="shared-by col-md-12">
-  Partagé par {{link.user}} {{timeAgo}}
-  </div>
-</div>
 
+{{yield}}

@@ -12,6 +12,6 @@ export default Ember.Route.extend(RouteMixin, {
 
 
   model: function(params) {
-    return this.findPaged('link',params);
+    return this.findPaged('share',params);
   }
 });

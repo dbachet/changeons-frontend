@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   init: function(){
     moment.locale("fr");
   },
+
   queryParams: ["category", "page", "perPage"],
   category: null,
 
