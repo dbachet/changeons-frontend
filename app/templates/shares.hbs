@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-3 col-md-push-7 more">
+  <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0 col-md-push-7 more">
     <div class="wrapper">
       <p class="lead">
         L'idée vous plaît ?
@@ -16,10 +16,23 @@
       </ul>
     </div>
   </div>
-  <section id="shares" class="col-md-5 col-md-offset-2 col-md-pull-3">
+  <section id="shares" class="col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-2 col-md-pull-3">
+    {{#if displayPaginationBar }}
+      <div class="pagination-bar text-center">
+        {{page-numbers content=content}}
+      </div>
+    {{/if}}
     <ul>
-      {{#each link in model}}
-        {{link-card link=link}}
+      {{#each share in model}}
+
+        {{#if share.isLink }}
+          {{link-card link=share}}
+        {{/if}}
+
+        {{#if share.isTweet}}
+          {{tweet-card tweet=share}}
+        {{/if}}
+
       {{/each}}
     </ul>
     {{#if displayPaginationBar }}

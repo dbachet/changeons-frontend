@@ -261,34 +261,58 @@ section#shares {
     list-style-type: none;
     padding: 0;
     li.link {
-      font-size: 1em;
-      color: #777;
-      padding: 20px;
+      font-size: 0.8em;
+      font: normal normal 16px/1.4 Helvetica,Roboto,"Segoe UI",Calibri,sans-serif;
+      color: #1C2022;
+      padding: 0;
       margin: 0;
-      min-height: 100px;
-      background-color: #fff;
       /* Samll devices (desktops, 768px and up) */
       @media (min-width: 768px) {
         font-size: 1.2em;
-        padding: 40px;
-        min-height: 150px;
+        padding: 0;
       }
-      &:not(:first-child){
-        border-top: 1px solid #e4e7ee;
+      .panel-body {
+        padding: 30px;
       }
-      span.name {
-        a, a:hover {
-          color: #457D24;
-          span.language {
-            color: #777;
-            text-transform: lowercase;
-          }
-        }
-        margin-left: 10px;
+      .panel {
+        margin-bottom: 0;
       }
-      div.shared-by {
+      .panel-default { border-color: #a1bbce }
+      p.name {
+        margin: 10px 0;
+        line-height: 1.5;
+        overflow: hidden;
+        position: relative;
+        max-height: 4.5em; /*display ellipsis after 3 lines*/
+      }
+
+      p.name:before  {
+        background: #fff;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        content: '\2026';
+
+      }
+
+      p.name:after{
+        content: '';
+        background: #fff;
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        z-index: 1;
+      }
+
+      div.date {
+        font-size: 0.825em;
+        color: #697882;
         margin: 20px 0 0;
       }
+    }
+    li.tweet,
+    li.link {
+      margin-bottom: 20px;
     }
   }
 }

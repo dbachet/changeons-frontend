@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: "li",
   classNames: ["link"],
-  timeAgo: function() {
-    return moment(this.get("link.createdAt")).fromNow();
+  formattedCreatedAt: function() {
+    return moment(this.get("link.createdAt")).format('hh:mm - Do MMM YYYY');
   }.property("link")
 });
