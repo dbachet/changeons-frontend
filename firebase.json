@@ -1,0 +1,23 @@
+{
+  "firebase": "changeons",
+  "public": "./dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "rewrites": [
+    {
+      "source": "/tests",
+      "destination": "/tests/index.html"
+    },
+    {
+      "source": "/tests/**",
+      "destination": "/tests/index.html"
+    },
+    {
+      "source": "/**",
+      "destination": "/index.html"
+    }
+  ]
+}
