@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "prod": "firebase-changeons",
+    "prod-changeons": "firebase-changeons"
+  }
+}
