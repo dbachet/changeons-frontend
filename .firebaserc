@@ -1,6 +1,7 @@
 {
   "projects": {
     "prod": "firebase-changeons",
-    "prod-changeons": "firebase-changeons"
+    "prod-changeons": "firebase-changeons",
+    "default": "firebase-changeons"
   }
 }
