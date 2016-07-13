@@ -53,11 +53,11 @@
         };
 
         // Facebook SDK
-        add('http://connect.facebook.net/fr_FR/all.js#xfbml=1', 'facebook-jssdk');
+        add('https://connect.facebook.net/fr_FR/all.js#xfbml=1', 'facebook-jssdk');
         // Twitter SDK
-        add('http://platform.twitter.com/widgets.js');
+        add('https://platform.twitter.com/widgets.js');
         // Pinterest SDK
-        add("http://assets.pinterest.com/js/pinit.js")
+        add("https://assets.pinterest.com/js/pinit.js")
         fjs.parentNode.insertBefore(frag, fjs);
       }(document, 'script'));
     </script>
@@ -67,5 +67,8 @@
     <script src="assets/changeons-frontend.js"></script>
 
     {{content-for 'body-footer'}}
+    <script type="text/javascript">
+      window.twttr.widgets.load(document.getElementById("shares"));
+    </script>
   </body>
 </html>
