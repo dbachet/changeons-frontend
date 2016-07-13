@@ -33,42 +33,12 @@
 
     </script>
 
-    <script type="text/javascript">
-      /*
-      * Async Sharing Buttons (G+, Facebook, Twitter)
-      * http://www.narga.net/load-social-button-javascript-asynchronously/
-      * Simple JavaScript function that loads the third-party scripts asynchronously and after the page loads to improve site performance.
-      */
-      (function(doc, script) {
-        var js, fjs = doc.getElementsByTagName(script)[0],
-        frag = doc.createDocumentFragment(),
-        add = function(url, id) {
-            if (doc.getElementById(id)) {
-                return;
-            }
-            js = doc.createElement(script);
-            js.src = url;
-            id && (js.id = id);
-            frag.appendChild(js);
-        };
-
-        // Facebook SDK
-        add('https://connect.facebook.net/fr_FR/all.js#xfbml=1', 'facebook-jssdk');
-        // Twitter SDK
-        add('https://platform.twitter.com/widgets.js');
-        // Pinterest SDK
-        add("https://assets.pinterest.com/js/pinit.js")
-        fjs.parentNode.insertBefore(frag, fjs);
-      }(document, 'script'));
-    </script>
-
     {{content-for 'body'}}
     <script src="assets/vendor.js"></script>
     <script src="assets/changeons-frontend.js"></script>
 
     {{content-for 'body-footer'}}
-    <script type="text/javascript">
-      window.twttr.widgets.load(document.getElementById("shares"));
-    </script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="//connect.facebook.net/fr_FR/all.js#xfbml=1';" charset="utf-8"></script>
   </body>
 </html>
