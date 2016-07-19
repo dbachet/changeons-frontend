@@ -28,7 +28,7 @@
       <h1>Partageons l'information sur&nbsp;le&nbsp;respect de&nbsp;l'environnement</h1>
       <h4>Changeons pour une société plus solidaire</h4>
     </div>
-    {{header-menu currentCategory=currentCategory applicationController=controller}}
+    {{header-menu currentCategory=currentCategory applicationController=applicationController}}
   </header>
 
   {{#if showFixedTopBar}}
@@ -58,7 +58,7 @@
     <ul class="social col-xs-8 col-md-4 col-md-offset-2">
       <li>
         Suivez notre compte Twitter !<br>
-        {{follow-twitter}}
+        {{follow-twitter id="twitter-follow-button-footer"}}
       </li>
       <li>
         Aimez notre page Facebook !<br>
