@@ -1,10 +1,11 @@
 import Ember from 'ember';
+/* global twttr */
 
 export default Ember.Component.extend({
   tagName: "div",
   id: null,
   didInsertElement: function() {
-    window.twttr.widgets.createFollowButton(
+    twttr.widgets.createFollowButton(
       'ChangeonsOrg',
       document.getElementById(this.id),
       {
