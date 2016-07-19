@@ -7,7 +7,7 @@
       <ul class="social-buttons">
         <li>
           Suivez notre compte Twitter !<br>
-          {{follow-twitter}}
+          {{follow-twitter id="twitter-follow-button-top"}}
         </li>
         <li>
           Aimez notre page Facebook !<br>
@@ -23,7 +23,8 @@
       </div>
     {{/if}}
     <ul>
-      {{#each share in model}}
+
+      {{#each model as |share|}}
 
         {{#if share.isLink }}
           {{link-card link=share}}

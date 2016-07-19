@@ -5,7 +5,7 @@
       <div class="alerts">
         {{#if hasErrors}}
           <ul class="alert alert-danger" role="alert">
-            {{#each error in model.errors.messages}}
+            {{#each model.errors.messages as |error|}}
               <li>L'email {{error}}</li>
             {{/each}}
           </ul>

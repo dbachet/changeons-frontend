@@ -4,7 +4,6 @@ import InViewportMixin from "../mixins/in-viewport";
 export default Ember.Component.extend(InViewportMixin, {
   tagName: "div",
   classNames: ["col-xs-12"],
-  applicationController: null,
 
   hasEnteredViewport: function() {
     // This code will run when the header-menu will not be

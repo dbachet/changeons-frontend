@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  needs: "shares",
-  sharesController: Ember.computed.alias("controllers.shares"),
+  sharesController: Ember.inject.controller("shares"),
+  applicationController: Ember.inject.controller("application"),
 
   currentCategory: Ember.computed.alias("sharesController.category"),
 
