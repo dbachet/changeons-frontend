@@ -22,6 +22,13 @@
             CONTACT
           {{/link-to}}
         </li>
+        <li>
+          {{#if session.isAuthenticated}}
+            <a id="logout" {{ action 'invalidateSession' }}>Logout</a>
+          {{else}}
+            {{#link-to 'login'}}Login{{/link-to}}
+          {{/if}}
+        </li>
       </ul>
     </div>
     <div class="col-md-6 col-md-offset-3 text-center opening-lines">

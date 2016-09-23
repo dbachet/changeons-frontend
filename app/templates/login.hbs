@@ -1,0 +1,10 @@
+<h3>Login</h3>
+{{#if errors}}<div class="errors">{{errors}}</div>{{/if}}
+
+<form {{action 'authenticate' on='submit'}}>
+  <label for="identification">Email</label>
+  {{input value=identification placeholder='Enter your email address' type='email' required='' autofocus=''}}
+  <label for="password">Password</label>
+  {{input value=password placeholder='Enter your password' type='password' required=''}}
+  <button type="submit">Sign in</button>
+</form>
