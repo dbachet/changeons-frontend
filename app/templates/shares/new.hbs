@@ -34,6 +34,18 @@
         </div>
       </div>
 
+      <div class="control-group">
+        <div class="control-label">
+          <label>Catégorie</label>
+        </div>
+
+        <div class="controls">
+          {{#power-select options=categories onchange=(action "updateCategory") as |category|}}
+            {{category}}
+          {{/power-select}}
+        </div>
+      </div>
+
       <button type="submit" class="btn btn-primary">Enregistrer</button>
     </form>
   </div>
