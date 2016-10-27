@@ -11,9 +11,7 @@ export default Ember.Controller.extend({
 
       this.get('session').authenticate('authenticator:devise', identification, password).then(() => {
         this.get('currentSession').loadCurrentUser();
-        this.transitionToRoute('index');
       }, (err) => {
-        console.log(err);
         this.set('errors', err.error);
       });
     }

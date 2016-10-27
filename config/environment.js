@@ -19,6 +19,10 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['ember-simple-auth'] = {
+    routeAfterAuthentication: '/'
+  };
+
   if (environment === 'development') {
     ENV.API_HOST = "http://localhost:3000";
     // ENV.APP.LOG_RESOLVER = true;
