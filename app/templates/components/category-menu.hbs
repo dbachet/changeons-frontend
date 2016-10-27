@@ -25,7 +25,10 @@
   </div>
 {{else}}
   <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-5 col-md-3 col-md-offset-5 not-expanded">
+    <div class="col-md-2 col-md-offset-2 text-right" style="background:white">
+      {{link-to "+Ajouter un lien" "shares.new"}}
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-5 col-md-3 col-md-offset-1 not-expanded">
       <a href="" {{action "expandCategoryMenu"}}>
         Filtrer par catégorie
         <span class="glyphicon glyphicon-triangle-bottom small"></span>

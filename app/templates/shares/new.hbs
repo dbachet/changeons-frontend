@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+    Créer et ajouter un lien
+    <form class="form-horizontal" {{action "create" on="submit"}}>
+      <div class="control-group">
+        <div class="control-label">
+          <label>Description</label>
+        </div>
+
+        <div class="controls">
+          {{textarea value=model.name}}
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <label>URL / lien à partager</label>
+        </div>
+
+        <div class="controls">
+          {{input value=model.url type="text"}}
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <label>Langue</label>
+        </div>
+
+        <div class="controls">
+          {{#power-select options=languages onchange=(action "updateLanguage") as |language|}}
+            {{language}}
+          {{/power-select}}
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+  </div>
+</div>
+
