@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  currentUser: Ember.inject.service(),
   sharesController: Ember.inject.controller("shares"),
   applicationController: Ember.inject.controller("application"),
 

@@ -24,9 +24,14 @@
         </li>
         <li>
           {{#if session.isAuthenticated}}
-            <a id="logout" {{ action 'invalidateSession' }}>Logout</a>
+            {{currentUser.email}}
+            <small>
+              <a id="logout" {{ action 'invalidateSession' }}>
+                (Se déconnecter)
+              </a>
+            </small>
           {{else}}
-            {{#link-to 'login'}}Login{{/link-to}}
+            {{#link-to 'login'}}Se connecter{{/link-to}}
           {{/if}}
         </li>
       </ul>
