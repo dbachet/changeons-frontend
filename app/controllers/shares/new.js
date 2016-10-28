@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
     create() {
       var model = this.get('model');
       model.save();
-      return false;
+      return true;
     },
     updateLanguage(language) {
       var model = this.get('model');
