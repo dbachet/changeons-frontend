@@ -12,20 +12,26 @@ export default Ember.Controller.extend({
     "Politique",
     "Santé"
   ],
+  category: null,
+  language: null,
 
   actions: {
     create() {
       var model = this.get('model');
       model.save();
+      this.set('language', null);
+      this.set('category', null);
       return true;
     },
     updateLanguage(language) {
       var model = this.get('model');
       model.set('language', language);
+      this.set('language', language);
     },
     updateCategory(category) {
       var model = this.get('model');
       model.set('category', category);
+      this.set('category', category);
     }
   }
 });

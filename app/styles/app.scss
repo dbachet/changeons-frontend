@@ -1,12 +1,12 @@
 @import 'bower_components/font-awesome/scss/font-awesome.scss';
 @import 'shared_sass.scss';
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import 'ember-power-select/themes/bootstrap';
 @import "ember-power-select";
 
 html
 
 body {
-  color: #fff;
   background-color: #f0f2f4;
   font-weight: 200;
   margin:0;
@@ -39,6 +39,7 @@ body:before {
 }
 
 header {
+  color: white;
   padding: 20px 0;
   img { width: 85% }
   /* Medium devices (desktops, 992px and up) */
