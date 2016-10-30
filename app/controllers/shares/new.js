@@ -18,10 +18,16 @@ export default Ember.Controller.extend({
   actions: {
     create() {
       var model = this.get('model');
-      model.save();
-      this.set('language', null);
-      this.set('category', null);
-      return true;
+      var that = this;
+      var bubbleUp = false;
+
+      model.save().then(function() {
+        this.set('language', null);
+        this.set('category', null);
+        bubbleUp = true;
+      });
+
+      return bubbleUp;
     },
     updateLanguage(language) {
       var model = this.get('model');

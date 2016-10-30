@@ -262,7 +262,15 @@ header {
   }
 }
 
+.error { color: #f00 }
+
 section#shares {
+  .new {
+    color: #777;
+    h1, label { font-weight: 200 }
+    small { color: #CCC }
+  }
+
   ul {
     list-style-type: none;
     padding: 0;
