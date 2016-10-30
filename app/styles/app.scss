@@ -64,7 +64,7 @@ header {
       font-size: 1em;
     }
     li {
-      width: 25%;
+      width: 20%;
       display: table-cell;
       a, a:hover, a:visited, a:focus {
         color: #fff;
@@ -113,6 +113,10 @@ header {
   /* Extra large devices (extra large desktops, 1600px and up) */
   @media (min-width: 1600px) {
     font-size: 2em;
+  }
+  .add-link-btn {
+    background-color: #2E3D4D;
+    margin-left: 5px;
   }
   .not-expanded, .expanded {
     padding: 10px;
