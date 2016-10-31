@@ -21,13 +21,9 @@ export default Ember.Controller.extend({
       var that = this;
       var bubbleUp = false;
 
-      model.save().then(function() {
-        this.set('language', null);
-        this.set('category', null);
-        bubbleUp = true;
+      model.save().then(function(share) {
+        that.send('backToHomepage');
       });
-
-      return bubbleUp;
     },
     updateLanguage(language) {
       var model = this.get('model');

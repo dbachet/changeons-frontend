@@ -12,11 +12,14 @@ export default Ember.Route.extend(RouteMixin, {
 
 
   model: function(params) {
-    return this.findPaged('share',params);
+    return this.findPaged('share', params);
   },
   actions: {
-    create() {
+    backToHomepage() {
       this.refresh();
+      $("html, body").animate({
+        scrollTop: 0
+      }, 300);
     }
   }
 });

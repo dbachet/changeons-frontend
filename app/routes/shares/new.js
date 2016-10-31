@@ -8,7 +8,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     return this.get('store').createRecord('share', { type: 'Link' })
   },
   actions: {
-    create() {
+    backToHomepage() {
       this.transitionTo('shares');
       return true;
     }
