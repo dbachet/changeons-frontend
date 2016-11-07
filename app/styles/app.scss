@@ -1,11 +1,12 @@
 @import 'bower_components/font-awesome/scss/font-awesome.scss';
 @import 'shared_sass.scss';
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import 'ember-power-select/themes/bootstrap';
+@import "ember-power-select";
 
 html
 
 body {
-  color: #fff;
   background-color: #f0f2f4;
   font-weight: 200;
   margin:0;
@@ -38,6 +39,7 @@ body:before {
 }
 
 header {
+  color: white;
   padding: 20px 0;
   img { width: 85% }
   /* Medium devices (desktops, 992px and up) */
@@ -62,7 +64,7 @@ header {
       font-size: 1em;
     }
     li {
-      width: 25%;
+      width: 20%;
       display: table-cell;
       a, a:hover, a:visited, a:focus {
         color: #fff;
@@ -111,6 +113,10 @@ header {
   /* Extra large devices (extra large desktops, 1600px and up) */
   @media (min-width: 1600px) {
     font-size: 2em;
+  }
+  .add-link-btn {
+    background-color: #2E3D4D;
+    margin-left: 5px;
   }
   .not-expanded, .expanded {
     padding: 10px;
@@ -256,7 +262,15 @@ header {
   }
 }
 
+.error { color: #f00 }
+
 section#shares {
+  .new {
+    color: #777;
+    h1, label { font-weight: 200 }
+    small { color: #CCC }
+  }
+
   ul {
     list-style-type: none;
     padding: 0;

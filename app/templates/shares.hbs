@@ -17,6 +17,8 @@
     </div>
   </div>
   <section id="shares" class="col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-2 col-md-pull-3">
+    {{outlet}}
+
     {{#if displayPaginationBar }}
       <div class="pagination-bar text-center">
         {{page-numbers content=content}}
@@ -42,6 +44,4 @@
       </div>
     {{/if}}
   </section>
-
-  {{outlet}}
 </div>

@@ -1,6 +1,9 @@
-import ActiveModelAdapter from 'active-model-adapter';
+import ENV from '../config/environment';
+import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
+import DS from 'ember-data';
 
-export default ActiveModelAdapter.extend({
+export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
+  host: ENV['API_HOST'],
   namespace: "api/v1",
-  host: "https://changeons-prod.herokuapp.com"
+  authorizer: "authorizer:devise"
 });
