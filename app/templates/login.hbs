@@ -1,10 +1,26 @@
-<h3>Login</h3>
-{{#if errors}}<div class="errors">{{errors}}</div>{{/if}}
+<div class="row">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <div class="panel panel-default new">
+      <div class="panel-body">
+        <h1>Vous avez un compte</h1>
+        <form {{action "authenticate" on="submit"}} novalidate=true>
+          <div class="form-group">
+            <label for="identification">Email</label>
+            {{input value=identification class='form-control' placeholder='Entrez votre adresse email' type='email' required='' autofocus=''}}
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            {{input value=password class='form-control' placeholder='Entrez votre mot de passe' type='password' required='' autofocus=''}}
+            {{#if errors}}
+              <div class="error">
+                {{errors}}
+              </div>
+            {{/if}}
+          </div>
+          <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
-<form {{action 'authenticate' on='submit'}}>
-  <label for="identification">Email</label>
-  {{input value=identification placeholder='Enter your email address' type='email' required='' autofocus=''}}
-  <label for="password">Password</label>
-  {{input value=password placeholder='Enter your password' type='password' required=''}}
-  <button type="submit">Sign in</button>
-</form>
